@@ -1,3 +1,3 @@
 SELECT
 * 
-FROM {{sourrce('landing', 'orders')}}
+FROM {{source('landing', 'orders')}}
