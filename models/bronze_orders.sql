@@ -1,3 +1,3 @@
 SELECT
 * 
-FROM dbt_project_retail.landing.orders
+FROM {{sourrce('landing', 'orders')}}
