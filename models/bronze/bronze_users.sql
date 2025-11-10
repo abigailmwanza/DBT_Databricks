@@ -1,3 +1,4 @@
 SELECT
-* 
-FROM {{source('landing', 'users')}}
+*
+FROM
+{{ source('landing', 'users') }}
