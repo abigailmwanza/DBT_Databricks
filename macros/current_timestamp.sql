@@ -1,3 +1,3 @@
-{% macro current_timestamp() -%}
-  {{ modules.datetime.datetime.now() }}
+{% macro current_timestamp() %}
+    cast('{{ run_started_at }}' as timestamp)
 {% endmacro %}
