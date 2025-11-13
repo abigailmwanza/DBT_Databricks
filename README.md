@@ -1,7 +1,7 @@
-# 🧱 DBT + Databricks + AWS Data Pipeline
+# 🧱 DBT + Databricks Data Pipeline
 
 ## 📖 Project Overview
-This project demonstrates a modern **data engineering workflow** using **dbt (Data Build Tool)** with **Databricks** as the data warehouse and **AWS S3** as the data lake.  
+This project demonstrates a modern **data engineering workflow** using **dbt (Data Build Tool)** with **Databricks** as the data warehouse.  
 
 It transforms raw data from multiple sources — **orders**, **products**, **users**, and **reviews** — into analytics-ready gold tables for business reporting and insights.
 
@@ -11,17 +11,17 @@ The project follows the **Medallion Architecture** pattern (Bronze → Silver �
 
 ## 🗂️ Data Pipeline Architecture
 
-### 🪣 1. Landing Zone (AWS S3)
-Raw datasets are stored in **AWS S3 buckets**, forming the ingestion layer for all data sources.
+### 🪣 1. Landing Zone
+Raw datasets are uploaded to **Databricks** as the ingestion layer for all data sources.
 
-- Serves as the **data lake**  
+- Serves as the **data lake** within the Databricks workspace  
 - Holds unprocessed **raw files** (CSV)  
 - Acts as the source for Databricks ingestion  
 
 ---
 
 ### 🥉 2. Bronze Layer (Databricks)
-Data from S3 is ingested into **Databricks Delta tables** with minimal transformation.
+Data from the landing zone is ingested into **Databricks Delta tables** with minimal transformation.
 
 - Basic cleaning and schema alignment  
 - Ensures consistency across data sources  
@@ -59,18 +59,7 @@ I chose **Databricks** because it combines scalability, performance, and simplic
 - 💾 **Delta Lake** provides ACID transactions and version control  
 - 🚀 **Scalable** — handles large datasets and streaming data efficiently  
 - 🧠 **Native dbt integration** — seamless SQL-based model execution and testing  
-- 💰 **Cost-effective** by leveraging AWS S3 for storage while using compute only when needed  
-
----
-
-## ☁️ Why AWS S3 for Data Storage
-**AWS S3** was selected as the data lake for its flexibility and cost-efficiency.
-
-**Benefits:**
-- 🔒 Highly available and durable storage  
-- 💰 Cost-effective for large data volumes  
-- 🔗 Native integration with Databricks  
-- ⚡ Supports future expansion with AWS Glue, Redshift, or Athena  
+- 💰 **Cost-effective** — the free community version supports development and experimentation  
 
 ---
 
@@ -81,10 +70,10 @@ The following **lineage graph** shows the flow of data through the medallion lay
 ![dbt Lineage Graph](https://github.com/abigailmwanza/DBT_Databricks/blob/main/Images/Screenshot%202025-11-13%20at%2008.01.46.png)
 
 **Legend:**
-- 🟩 **Landing:** Raw data from AWS S3  
+- 🟩 **Landing:** Raw data uploaded to Databricks  
 - 🟦 **Bronze:** Ingested and lightly cleaned data  
 - 🔷 **Silver:** Transformed and enriched datasets  
-- 🟦 **Gold:** Aggregated business-ready insights  
+- 🟨 **Gold:** Aggregated business-ready insights  
 
 ---
 
@@ -94,7 +83,6 @@ The following **lineage graph** shows the flow of data through the medallion lay
 |------|----------|
 | 🧰 **dbt** | Data transformation, testing, and documentation |
 | 💎 **Databricks** | Data warehouse and compute engine |
-| ☁️ **AWS S3** | Data lake for raw and intermediate data |
 | 🧱 **Delta Lake** | Reliable storage format with ACID transactions |
 | 🧾 **GitHub** | Version control and project documentation |
 
@@ -109,19 +97,10 @@ The following **lineage graph** shows the flow of data through the medallion lay
 ---
 
 ## 🚀 Next Steps
-- Automate ingestion with **Databricks Jobs**  
-- Schedule dbt runs via **Databricks Workflows** or **Airflow**  
+
 - Visualize gold models in **Power BI** or **Tableau**  
-- Add **dbt tests** and **documentation** for improved data governance  
-
+ 
 ---
-
-## 🧭 Repository Structure
-
-
-
-
-
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
