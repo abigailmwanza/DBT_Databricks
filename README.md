@@ -1,4 +1,4 @@
-Welcome to your new dbt project!
+# Welcome to DBT-On-Databricks project!
 
 ### Using the starter project
 
