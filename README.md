@@ -22,7 +22,7 @@ Raw datasets are uploaded to **Databricks** as the ingestion layer for all data 
 
 ### 🥉 2. Bronze Layer (Databricks)
 
-[Link Text](https://example.com)
+[Click to view code](models/bronze)
 
 Data from the landing zone is ingested into **Databricks Delta tables** with minimal transformation.
 
