@@ -46,6 +46,8 @@ Example transformations:
 ---
 
 ### 🥇 4. Gold Layer (Analytics Models)
+
+[Click to view code](models/gold)
 Aggregated models are built to power reporting and dashboards.
 
 Key gold models:
