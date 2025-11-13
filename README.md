@@ -78,7 +78,7 @@ I chose **Databricks** because it combines scalability, performance, and simplic
 
 The following **lineage graph** shows the flow of data through the medallion layers — from raw ingestion to gold analytics models:
 
-![dbt Lineage Graph](./Screenshot%202025-11-13%20at%2008.01.46.png)
+![dbt Lineage Graph](https://github.com/abigailmwanza/DBT_Databricks/blob/main/Images/Screenshot%202025-11-13%20at%2008.01.46.png)
 
 **Legend:**
 - 🟩 **Landing:** Raw data from AWS S3  
