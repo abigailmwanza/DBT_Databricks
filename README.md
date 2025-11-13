@@ -33,6 +33,9 @@ Data from the landing zone is ingested into **Databricks Delta tables** with min
 ---
 
 ### 🥈 3. Silver Layer (dbt Models)
+
+[Click to view code](models/silver)
+
 Data is cleaned, standardized, and enriched in dbt models. Relationships between **products**, **users**, **orders**, and **reviews** are defined.
 
 Example transformations:
