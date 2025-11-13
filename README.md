@@ -7,6 +7,7 @@ It transforms raw data from multiple sources — **orders**, **products**, **use
 
 The project follows the **Medallion Architecture** pattern (Bronze → Silver → Gold) to ensure data quality, scalability, and reliability.
 
+![](https://github.com/abigailmwanza/DBT_Databricks/blob/main/Images/Screenshot%202025-11-13%20at%2009.29.07.png)
 ---
 
 ## 🗂️ Data Pipeline Architecture
