@@ -97,19 +97,6 @@ The following **lineage graph** shows the flow of data through the medallion lay
 
 ---
 
-## 📊 Example Business Insights
-- ⭐ **Average product ratings** by day and category  
-- 💰 **Daily sales trends** and conversion rates  
-- 👥 **User purchase behavior** and engagement  
-- 🏷️ **Product category performance** over time  
-
----
-
-## 🚀 Next Steps
-
-- Visualize gold models in **Power BI** or **Tableau**  
- 
----
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
